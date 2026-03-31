@@ -34,7 +34,7 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="font-sans text-gray-800 antialiased bg-white">
+<body class="font-sans text-gray-800 antialiased bg-gradient-to-br from-blue-50 via-white to-sky-100 min-h-screen">
 
     <!-- 1. Header (Top Navigation) -->
     <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
@@ -43,7 +43,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <i class="fa-solid fa-eye text-primary text-3xl"></i>
-                    <span class="font-bold text-2xl text-gray-900">Clear<span class="text-primary">Vision</span></span>
+                    <span class="font-bold text-2xl text-gray-900">Apollo's <span class="text-primary">Eye Clinic</span></span>
                 </div>
 
                 <!-- Desktop Menu -->
@@ -83,14 +83,14 @@
     </header>
 
     <!-- 2. Hero Section -->
-    <section id="home" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+    <section id="home" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-transparent overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 
                 <!-- Hero Text -->
                 <div class="text-center md:text-left z-10">
                     <div class="inline-block bg-blue-100 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-                        <i class="fa-solid fa-award mr-2"></i> Trusted Care in Your City
+                        <i class="fa-solid fa-award mr-2"></i> Trusted Care in Barjora
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
                         Advanced Eye Care & <br/>
@@ -103,7 +103,7 @@
                         <a href="#appointment" class="bg-primary hover:bg-secondary text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg text-lg flex justify-center items-center">
                             Book Appointment
                         </a>
-                        <a href="tel:+1234567890" class="bg-white border-2 border-primary text-primary hover:bg-blue-50 px-8 py-3.5 rounded-full font-semibold transition-all text-lg flex justify-center items-center">
+                        <a href="tel:07586813706" class="bg-white border-2 border-primary text-primary hover:bg-blue-50 px-8 py-3.5 rounded-full font-semibold transition-all text-lg flex justify-center items-center">
                             <i class="fa-solid fa-phone mr-2"></i> Call Now
                         </a>
                     </div>
@@ -153,7 +153,7 @@
     </div>
 
     <!-- 4. Services Section -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-20 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Specialized Treatments</h2>
@@ -238,7 +238,7 @@
     </section>
 
     <!-- 5. Why Choose Us -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-white/40 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Image side -->
@@ -311,19 +311,19 @@
     </section>
 
     <!-- 6. Doctor Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-blue-50 rounded-3xl p-8 md:p-12">
+            <div class="bg-white/70 backdrop-blur-md border border-white rounded-3xl p-8 md:p-12 shadow-sm">
                 <div class="grid md:grid-cols-3 gap-8 items-center">
                     <div class="md:col-span-1">
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Sarah Sharma" class="rounded-2xl shadow-lg w-full object-cover aspect-square md:aspect-auto md:h-80" onerror="this.src='https://placehold.co/400x400/0284c7/ffffff?text=Doctor+Photo'">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. F Gazal" class="rounded-2xl shadow-lg w-full object-cover aspect-square md:aspect-auto md:h-80" onerror="this.src='https://placehold.co/400x400/0284c7/ffffff?text=Doctor+Photo'">
                     </div>
                     <div class="md:col-span-2">
                         <div class="inline-block bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4 shadow-sm">
                             Chief Eye Specialist
                         </div>
-                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Dr. Sarah Sharma</h2>
-                        <p class="text-xl text-primary font-medium mb-4">MBBS, MS (Ophthalmology), FAEH</p>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Dr. F Gazal</h2>
+                        <p class="text-xl text-primary font-medium mb-4">Consultant Ophthalmologist</p>
                         
                         <div class="flex items-center gap-6 mb-6">
                             <div class="text-center">
@@ -338,10 +338,10 @@
                         </div>
 
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Dr. Sharma is a renowned ophthalmologist specializing in phacoemulsification (cataract) and refractive surgeries. With international fellowships and a compassionate approach, she ensures every patient receives personalized, world-class vision care.
+                            Dr. F Gazal is a renowned ophthalmologist known for her polite behavior and excellent treatment. With a compassionate approach, she ensures every patient receives personalized, world-class vision care.
                         </p>
                         <a href="#appointment" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
-                            Consult Dr. Sharma
+                            Consult Dr. F Gazal
                         </a>
                     </div>
                 </div>
@@ -388,16 +388,16 @@
     </section>
 
     <!-- 8. Patient Reviews -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Patients Say</h2>
                 <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
                 <div class="flex justify-center items-center gap-2">
                     <div class="flex text-yellow-400 text-xl">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <span class="text-gray-600 font-medium">4.9/5 Average Rating</span>
+                    <span class="text-gray-600 font-medium">4.2/5 Average Rating (12 Reviews)</span>
                 </div>
             </div>
 
@@ -408,12 +408,12 @@
                     <div class="flex text-yellow-400 text-sm mb-4">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"Got my cataract surgery done here. The process was completely painless and my vision is crystal clear now. The staff is highly professional."</p>
+                    <p class="text-gray-600 mb-6 italic">"Highly Recommended Eye Care Center. I had an excellent experience. From the moment we walked in, we were impressed by the clean, well-organized setup and the courteous staff."</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">R</div>
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">M</div>
                         <div>
-                            <h5 class="font-bold text-gray-900">Rajesh Kumar</h5>
-                            <span class="text-xs text-gray-500">Cataract Patient</span>
+                            <h5 class="font-bold text-gray-900">MD NAZIR</h5>
+                            <span class="text-xs text-gray-500">Local Guide</span>
                         </div>
                     </div>
                 </div>
@@ -424,12 +424,12 @@
                     <div class="flex text-yellow-400 text-sm mb-4">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"I had high cylindrical power and got LASIK done by Dr. Sharma. It's like a miracle. I can see everything perfectly without glasses. Highly recommend!"</p>
+                    <p class="text-gray-600 mb-6 italic">"Best eye clinic with excellent treatment , behaviour of Dr F Gazal ma'am very polite.."</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold">A</div>
+                        <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold">P</div>
                         <div>
-                            <h5 class="font-bold text-gray-900">Anjali Singh</h5>
-                            <span class="text-xs text-gray-500">LASIK Patient</span>
+                            <h5 class="font-bold text-gray-900">Puja Ghosh</h5>
+                            <span class="text-xs text-gray-500">Patient</span>
                         </div>
                     </div>
                 </div>
@@ -438,14 +438,14 @@
                 <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
                     <i class="fa-solid fa-quote-left text-4xl text-blue-100 absolute top-6 right-6"></i>
                     <div class="flex text-yellow-400 text-sm mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"Very clean clinic and modern equipment. They took time to explain my eye issue (glaucoma) in detail and started the treatment immediately."</p>
+                    <p class="text-gray-600 mb-6 italic">"Very good service... and free check up is also nice very nice..."</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center font-bold">M</div>
+                        <div class="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center font-bold">S</div>
                         <div>
-                            <h5 class="font-bold text-gray-900">Mohd. Tariq</h5>
-                            <span class="text-xs text-gray-500">Glaucoma Treatment</span>
+                            <h5 class="font-bold text-gray-900">Satisfied Patient</h5>
+                            <span class="text-xs text-gray-500">General Checkup</span>
                         </div>
                     </div>
                 </div>
@@ -458,16 +458,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Having Sudden Vision Problems or Eye Pain?</h2>
             <p class="text-red-100 mb-8 max-w-2xl mx-auto text-lg">Do not ignore eye emergencies. Get immediate medical attention from our experts today.</p>
-            <a href="tel:+1234567890" class="inline-flex items-center bg-white text-red-600 font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:bg-gray-50 transition-colors transform hover:scale-105">
+            <a href="tel:07586813706" class="inline-flex items-center bg-white text-red-600 font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:bg-gray-50 transition-colors transform hover:scale-105">
                 <i class="fa-solid fa-phone-volume mr-3"></i> Call Emergency Line
             </a>
         </div>
     </section>
 
     <!-- 9. Appointment Form (Main Conversion) & 11. Contact Section -->
-    <section id="appointment" class="py-20 bg-gray-50">
+    <section id="appointment" class="py-20 bg-white/40 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-white">
                 <div class="grid lg:grid-cols-5">
                     
                     <!-- Form Side -->
@@ -551,7 +551,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-300 mb-1">Clinic Address</h4>
-                                    <p class="text-gray-400 text-sm">123 Health Avenue, Medical District,<br>New Delhi, 110001</p>
+                                    <p class="text-gray-400 text-sm">Durgapur, Main Road, Barjora<br>West Bengal 722202</p>
                                 </div>
                             </div>
 
@@ -561,8 +561,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-300 mb-1">Phone Number</h4>
-                                    <a href="tel:+919876543210" class="text-gray-400 text-sm hover:text-white transition-colors">+91 98765 43210</a><br>
-                                    <a href="tel:0112345678" class="text-gray-400 text-sm hover:text-white transition-colors">011-2345678</a>
+                                    <a href="tel:07586813706" class="text-gray-400 text-sm hover:text-white transition-colors">075868 13706</a>
                                 </div>
                             </div>
 
@@ -572,14 +571,14 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-300 mb-1">Clinic Timings</h4>
-                                    <p class="text-gray-400 text-sm">Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 2:00 PM</p>
+                                    <p class="text-gray-400 text-sm">Opens 8:00 AM<br>(Please call to confirm specific days)</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Map Placeholder -->
                         <div class="mt-10 rounded-xl overflow-hidden h-40 bg-gray-800 relative z-10">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.061266050511!2d77.21855231508246!3d28.62792618241975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xc46188cb612f4ea7!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.3981881648083!2d87.2882352!3d23.4243886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f70ba696fb5fa3%3A0xc3f17dcd8f6a9e10!2sApollo&#39;s%20Eye%20Clinic!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -595,7 +594,7 @@
                 <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center gap-2 mb-4">
                         <i class="fa-solid fa-eye text-primary text-2xl"></i>
-                        <span class="font-bold text-xl text-white">Clear<span class="text-primary">Vision</span></span>
+                        <span class="font-bold text-xl text-white">Apollo's <span class="text-primary">Eye Clinic</span></span>
                     </div>
                     <p class="text-sm text-gray-500 mb-6">Providing comprehensive eye care solutions with compassion, precision, and advanced medical technology.</p>
                     <div class="flex space-x-4">
@@ -641,7 +640,7 @@
             </div>
             
             <div class="text-center text-sm text-gray-600 border-t border-gray-800 pt-8 mt-8">
-                &copy; <script>document.write(new Date().getFullYear())</script> ClearVision Eye Clinic. All rights reserved.
+                &copy; <script>document.write(new Date().getFullYear())</script> Apollo's Eye Clinic, Barjora. All rights reserved.
             </div>
         </div>
     </footer>
@@ -649,13 +648,13 @@
     <!-- Must-Have Sticky Elements -->
     
     <!-- WhatsApp Floating Button (Desktop & Mobile) -->
-    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-20 md:bottom-6 right-4 md:right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(34,197,94,0.39)] hover:bg-green-600 hover:scale-110 transition-all z-40">
+    <a href="https://wa.me/917586813706" target="_blank" class="fixed bottom-20 md:bottom-6 right-4 md:right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(34,197,94,0.39)] hover:bg-green-600 hover:scale-110 transition-all z-40">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <!-- 3. Quick Action Bar (Mobile Focus Only) -->
     <div class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 flex justify-around items-center py-2 px-1 pb-safe">
-        <a href="tel:+1234567890" class="flex flex-col items-center justify-center text-gray-600 hover:text-primary flex-1 py-1">
+        <a href="tel:07586813706" class="flex flex-col items-center justify-center text-gray-600 hover:text-primary flex-1 py-1">
             <i class="fa-solid fa-phone text-xl mb-1"></i>
             <span class="text-[10px] font-medium uppercase tracking-wide">Call</span>
         </a>
