@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Eye Care & Vision Solutions</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Tailwind Configuration for custom colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0284c7', // Sky 600 - Trustworthy blue
+                        secondary: '#0369a1', // Sky 700
+                        accent: '#38bdf8', // Sky 400
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hide scrollbar for clean look in some galleries if needed */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white">
+
+    <!-- 1. Header (Top Navigation) -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-eye text-primary text-3xl"></i>
+                    <span class="font-bold text-2xl text-gray-900">Clear<span class="text-primary">Vision</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="#services" class="text-gray-600 hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary font-medium transition-colors">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="#appointment" class="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Book Eye Checkup
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#home" class="block px-3 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-md">Home</a>
+                <a href="#services" class="block px-3 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-md">Services</a>
+                <a href="#about" class="block px-3 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-md">About</a>
+                <a href="#contact" class="block px-3 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-primary rounded-md">Contact</a>
+                <a href="#appointment" class="block mt-4 bg-primary text-white px-3 py-3 rounded-md font-medium">Book Eye Checkup</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="home" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Hero Text -->
+                <div class="text-center md:text-left z-10">
+                    <div class="inline-block bg-blue-100 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                        <i class="fa-solid fa-award mr-2"></i> Trusted Care in Your City
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                        Advanced Eye Care & <br/>
+                        <span class="text-primary">Vision Solutions</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                        Experience world-class eye treatments with modern equipment, highly experienced specialists, and compassionate care.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#appointment" class="bg-primary hover:bg-secondary text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg text-lg flex justify-center items-center">
+                            Book Appointment
+                        </a>
+                        <a href="tel:+1234567890" class="bg-white border-2 border-primary text-primary hover:bg-blue-50 px-8 py-3.5 rounded-full font-semibold transition-all text-lg flex justify-center items-center">
+                            <i class="fa-solid fa-phone mr-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image / Mini Form -->
+                <div class="relative z-10">
+                    <!-- Decorative background blob -->
+                    <div class="absolute -inset-4 bg-blue-200 rounded-full blur-3xl opacity-50 z-0"></div>
+                    
+                    <div class="relative bg-white p-8 rounded-2xl shadow-xl z-10 border border-gray-100">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Quick Appointment</h3>
+                        <p class="text-sm text-gray-500 mb-6">Skip the queue. Register your details below.</p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('Request sent! We will call you shortly.');" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="+1 234 567 8900">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                                <input type="date" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                            </div>
+                            <button type="submit" class="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 rounded-lg font-semibold transition-colors mt-2">
+                                Request Callback
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Camp Banner (Pro Tip implementation) -->
+    <div class="bg-accent text-white py-3">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="font-medium text-sm md:text-base">
+                <i class="fa-solid fa-gift mr-2"></i> 
+                <strong>Special Offer:</strong> Free Eye Checkup Camp this Sunday! 
+                <a href="#appointment" class="underline ml-2 font-bold hover:text-blue-900">Register Now</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- 4. Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Specialized Treatments</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg">We offer comprehensive eye care services using the latest diagnostic and surgical technology.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-stethoscope text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Comprehensive Eye Checkup</h3>
+                    <p class="text-gray-600 mb-6">Complete vision testing and eye health evaluation to detect problems early.</p>
+                    <a href="#appointment" class="text-primary font-semibold hover:text-secondary inline-flex items-center">
+                        Know More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-eye-dropper text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cataract Surgery</h3>
+                    <p class="text-gray-600 mb-6">Painless, blade-free micro-incision cataract surgery with premium lens implants.</p>
+                    <a href="#appointment" class="text-primary font-semibold hover:text-secondary inline-flex items-center">
+                        Know More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-glasses text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">LASIK & Specs Removal</h3>
+                    <p class="text-gray-600 mb-6">Get freedom from glasses and contact lenses with advanced laser vision correction.</p>
+                    <a href="#appointment" class="text-primary font-semibold hover:text-secondary inline-flex items-center">
+                        Know More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-eye-low-vision text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Glaucoma Treatment</h3>
+                    <p class="text-gray-600 mb-6">Expert management of eye pressure to prevent optic nerve damage and vision loss.</p>
+                    <a href="#appointment" class="text-primary font-semibold hover:text-secondary inline-flex items-center">
+                        Know More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-child text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pediatric Ophthalmology</h3>
+                    <p class="text-gray-600 mb-6">Specialized eye care for children, treating squint, lazy eye, and refractive errors.</p>
+                    <a href="#appointment" class="text-primary font-semibold hover:text-secondary inline-flex items-center">
+                        Know More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 6 (Placeholder for balance) -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-briefcase-medical text-3xl text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Retina Care</h3>
+                    <p class="text-gray-600 mb-6">Advanced diagnostics and treatment for diabetic retinopathy and macular degeneration.</p>
+                    <a href="#appointment" class="text-primary font-semibold hover:text-secondary inline-flex items-center">
+                        Know More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Us -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image side -->
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Clinic" class="rounded-2xl shadow-xl w-full object-cover h-[500px]" onerror="this.src='https://placehold.co/800x500/e2e8f0/475569?text=Clinic+Image'">
+                    
+                    <!-- Floating stat -->
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600">
+                                <i class="fa-solid fa-face-smile text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold text-gray-900">10,000+</h4>
+                                <p class="text-sm text-gray-500 font-medium">Happy Patients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text side -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Patients Trust Us With Their Vision</h2>
+                    <p class="text-gray-600 mb-8 text-lg">We combine clinical expertise with state-of-the-art technology to deliver the best possible visual outcomes for our patients.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-user-doctor text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Experienced Specialists</h4>
+                                <p class="text-gray-600">Our doctors have decades of experience in complex eye surgeries.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-microscope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Latest Technology</h4>
+                                <p class="text-gray-600">Equipped with FDA-approved, cutting-edge diagnostic machines.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-bullseye text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Accurate Diagnosis</h4>
+                                <p class="text-gray-600">Precision testing ensures we treat the root cause, not just symptoms.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary">
+                                <i class="fa-solid fa-hand-holding-dollar text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Affordable Treatment</h4>
+                                <p class="text-gray-600">Transparent pricing and EMI options available for surgeries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Doctor Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-blue-50 rounded-3xl p-8 md:p-12">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-1">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Sarah Sharma" class="rounded-2xl shadow-lg w-full object-cover aspect-square md:aspect-auto md:h-80" onerror="this.src='https://placehold.co/400x400/0284c7/ffffff?text=Doctor+Photo'">
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="inline-block bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4 shadow-sm">
+                            Chief Eye Specialist
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Dr. Sarah Sharma</h2>
+                        <p class="text-xl text-primary font-medium mb-4">MBBS, MS (Ophthalmology), FAEH</p>
+                        
+                        <div class="flex items-center gap-6 mb-6">
+                            <div class="text-center">
+                                <span class="block text-2xl font-bold text-gray-900">15+</span>
+                                <span class="text-sm text-gray-500">Years Exp.</span>
+                            </div>
+                            <div class="w-px h-10 bg-gray-300"></div>
+                            <div class="text-center">
+                                <span class="block text-2xl font-bold text-gray-900">5000+</span>
+                                <span class="text-sm text-gray-500">Surgeries</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Dr. Sharma is a renowned ophthalmologist specializing in phacoemulsification (cataract) and refractive surgeries. With international fellowships and a compassionate approach, she ensures every patient receives personalized, world-class vision care.
+                        </p>
+                        <a href="#appointment" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                            Consult Dr. Sharma
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Eye Test / Equipment Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">World-Class Infrastructure</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-300 text-lg">We utilize advanced robotic and laser technologies to ensure zero-error diagnostics and treatments.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Laser Machine" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/333/fff?text=Equipment'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <span class="font-medium text-white">Advanced LASIK Suite</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Testing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/333/fff?text=Testing'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <span class="font-medium text-white">Retina Imaging</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Microscope" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/333/fff?text=OT'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <span class="font-medium text-white">Modular OT</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Clinic Area" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/333/fff?text=Lounge'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <span class="font-medium text-white">Patient Lounge</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Patient Reviews -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Patients Say</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                <div class="flex justify-center items-center gap-2">
+                    <div class="flex text-yellow-400 text-xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-gray-600 font-medium">4.9/5 Average Rating</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-blue-100 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Got my cataract surgery done here. The process was completely painless and my vision is crystal clear now. The staff is highly professional."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">R</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">Rajesh Kumar</h5>
+                            <span class="text-xs text-gray-500">Cataract Patient</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-blue-100 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"I had high cylindrical power and got LASIK done by Dr. Sharma. It's like a miracle. I can see everything perfectly without glasses. Highly recommend!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold">A</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">Anjali Singh</h5>
+                            <span class="text-xs text-gray-500">LASIK Patient</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-blue-100 absolute top-6 right-6"></i>
+                    <div class="flex text-yellow-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Very clean clinic and modern equipment. They took time to explain my eye issue (glaucoma) in detail and started the treatment immediately."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center font-bold">M</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">Mohd. Tariq</h5>
+                            <span class="text-xs text-gray-500">Glaucoma Treatment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Emergency CTA Banner -->
+    <section class="bg-red-600 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Having Sudden Vision Problems or Eye Pain?</h2>
+            <p class="text-red-100 mb-8 max-w-2xl mx-auto text-lg">Do not ignore eye emergencies. Get immediate medical attention from our experts today.</p>
+            <a href="tel:+1234567890" class="inline-flex items-center bg-white text-red-600 font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:bg-gray-50 transition-colors transform hover:scale-105">
+                <i class="fa-solid fa-phone-volume mr-3"></i> Call Emergency Line
+            </a>
+        </div>
+    </section>
+
+    <!-- 9. Appointment Form (Main Conversion) & 11. Contact Section -->
+    <section id="appointment" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="grid lg:grid-cols-5">
+                    
+                    <!-- Form Side -->
+                    <div class="lg:col-span-3 p-8 md:p-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Book Your Appointment</h2>
+                        <p class="text-gray-500 mb-8">Fill out the form below and our team will confirm your slot.</p>
+
+                        <form onsubmit="event.preventDefault(); alert('Appointment requested successfully!');" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Patient Name</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fa-regular fa-user text-gray-400"></i>
+                                        </div>
+                                        <input type="text" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white" placeholder="Enter full name">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fa-solid fa-phone text-gray-400"></i>
+                                        </div>
+                                        <input type="tel" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white" placeholder="Enter mobile number">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fa-regular fa-calendar text-gray-400"></i>
+                                        </div>
+                                        <input type="date" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Select Service / Problem</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fa-solid fa-eye text-gray-400"></i>
+                                        </div>
+                                        <select class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white appearance-none">
+                                            <option value="">Select an option</option>
+                                            <option value="checkup">General Eye Checkup</option>
+                                            <option value="blur">Blurry Vision / Specs Number</option>
+                                            <option value="cataract">Cataract Evaluation</option>
+                                            <option value="lasik">LASIK / Specs Removal</option>
+                                            <option value="pain">Eye Pain / Redness / Infection</option>
+                                            <option value="other">Other problem</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Additional Notes (Optional)</label>
+                                <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 focus:bg-white" placeholder="Describe your symptoms briefly..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-primary hover:bg-secondary text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg transform hover:-translate-y-1">
+                                Confirm Booking
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info Side -->
+                    <div class="lg:col-span-2 bg-gray-900 text-white p-8 md:p-12 relative overflow-hidden" id="contact">
+                        <!-- Decorative circle -->
+                        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+                        
+                        <h3 class="text-2xl font-bold mb-8 relative z-10">Contact Information</h3>
+                        
+                        <div class="space-y-6 relative z-10">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 text-primary">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-300 mb-1">Clinic Address</h4>
+                                    <p class="text-gray-400 text-sm">123 Health Avenue, Medical District,<br>New Delhi, 110001</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 text-primary">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-300 mb-1">Phone Number</h4>
+                                    <a href="tel:+919876543210" class="text-gray-400 text-sm hover:text-white transition-colors">+91 98765 43210</a><br>
+                                    <a href="tel:0112345678" class="text-gray-400 text-sm hover:text-white transition-colors">011-2345678</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 text-primary">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-300 mb-1">Clinic Timings</h4>
+                                    <p class="text-gray-400 text-sm">Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="mt-10 rounded-xl overflow-hidden h-40 bg-gray-800 relative z-10">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.061266050511!2d77.21855231508246!3d28.62792618241975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xc46188cb612f4ea7!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Footer -->
+    <footer class="bg-gray-950 text-gray-300 py-12 pb-24 md:pb-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-eye text-primary text-2xl"></i>
+                        <span class="font-bold text-xl text-white">Clear<span class="text-primary">Vision</span></span>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-6">Providing comprehensive eye care solutions with compassion, precision, and advanced medical technology.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 border-b border-gray-800 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Clinic</a></li>
+                        <li><a href="#doctor" class="hover:text-primary transition-colors">Our Doctor</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Patient Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 border-b border-gray-800 pb-2 inline-block">Our Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors">Cataract Surgery</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">LASIK Surgery</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Glaucoma Treatment</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Pediatric Eye Care</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Computer Vision Syndrome</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 border-b border-gray-800 pb-2 inline-block">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm text-gray-600 border-t border-gray-800 pt-8 mt-8">
+                &copy; <script>document.write(new Date().getFullYear())</script> ClearVision Eye Clinic. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Must-Have Sticky Elements -->
+    
+    <!-- WhatsApp Floating Button (Desktop & Mobile) -->
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-20 md:bottom-6 right-4 md:right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(34,197,94,0.39)] hover:bg-green-600 hover:scale-110 transition-all z-40">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- 3. Quick Action Bar (Mobile Focus Only) -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 flex justify-around items-center py-2 px-1 pb-safe">
+        <a href="tel:+1234567890" class="flex flex-col items-center justify-center text-gray-600 hover:text-primary flex-1 py-1">
+            <i class="fa-solid fa-phone text-xl mb-1"></i>
+            <span class="text-[10px] font-medium uppercase tracking-wide">Call</span>
+        </a>
+        <div class="w-px h-8 bg-gray-200"></div>
+        <a href="#appointment" class="flex flex-col items-center justify-center text-primary flex-1 py-1">
+            <i class="fa-regular fa-calendar-check text-xl mb-1"></i>
+            <span class="text-[10px] font-bold uppercase tracking-wide">Book</span>
+        </a>
+        <div class="w-px h-8 bg-gray-200"></div>
+        <a href="https://maps.google.com" target="_blank" class="flex flex-col items-center justify-center text-gray-600 hover:text-primary flex-1 py-1">
+            <i class="fa-solid fa-directions text-xl mb-1"></i>
+            <span class="text-[10px] font-medium uppercase tracking-wide">Direction</span>
+        </a>
+    </div>
+
+    <!-- Scripts for Interactivity -->
+    <script>
+        // 1. Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // 2. Sticky Navbar Styling on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm', 'bg-white/95');
+                navbar.classList.add('bg-white');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white');
+                navbar.classList.add('shadow-sm', 'bg-white/95');
+            }
+        });
+    </script>
+</body>
+</html>
