@@ -77,18 +77,27 @@ img {
     opacity: 1;
     transform: translateY(0);
 }
+
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
 .slider-track {
-    animation: scroll 35s linear infinite;
     display: flex;
     width: max-content;
 }
-.slider-track:hover {
-    animation-play-state: paused;
+
+/* Apply continuous animation only on larger screens */
+@media (min-width: 768px) {
+    .slider-track {
+        animation: scroll 35s linear infinite;
+    }
+    .slider-track:hover {
+        animation-play-state: paused;
+    }
 }
+
 /* Floating Animation for Hero */
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -392,10 +401,11 @@ Zero waiting time for emergencies
 </div>
 </div>
 
-<div class="relative w-full flex reveal" style="-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+<div class="relative w-full reveal" style="-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+<div class="w-full overflow-x-auto hide-scrollbar snap-x snap-mandatory py-4">
 <div class="slider-track gap-6 px-3">
 <!-- Items duplicated for slider -->
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1561489422-45de3d015e3e?auto=format&fit=crop&w=600&q=80" alt="Best Surgeon Award" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -404,7 +414,7 @@ Zero waiting time for emergencies
 </div>
 </div>
 </div>
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Conference Keynote" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -413,7 +423,7 @@ Zero waiting time for emergencies
 </div>
 </div>
 </div>
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=600&q=80" alt="Gold Medal Certificate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -422,7 +432,7 @@ Zero waiting time for emergencies
 </div>
 </div>
 </div>
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1582750433449-648ed127c09e?auto=format&fit=crop&w=600&q=80" alt="Surgical Team" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -431,7 +441,7 @@ Zero waiting time for emergencies
 </div>
 </div>
 </div>
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=600&q=80" alt="Fellowship Certificate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -441,7 +451,7 @@ Zero waiting time for emergencies
 </div>
 </div>
 <!-- Duplicate Set -->
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1561489422-45de3d015e3e?auto=format&fit=crop&w=600&q=80" alt="Best Surgeon Award" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -450,7 +460,7 @@ Zero waiting time for emergencies
 </div>
 </div>
 </div>
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Conference Keynote" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -459,7 +469,7 @@ Zero waiting time for emergencies
 </div>
 </div>
 </div>
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=600&q=80" alt="Gold Medal Certificate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -468,7 +478,7 @@ Zero waiting time for emergencies
 </div>
 </div>
 </div>
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1582750433449-648ed127c09e?auto=format&fit=crop&w=600&q=80" alt="Surgical Team" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
@@ -477,12 +487,13 @@ Zero waiting time for emergencies
 </div>
 </div>
 </div>
-<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white">
+<div class="w-[300px] h-[350px] shrink-0 rounded-3xl overflow-hidden shadow-lg border-4 border-white/80 relative group bg-white snap-center">
 <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=600&q=80" alt="Fellowship Certificate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
 <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-900/30 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 <div>
 <h4 class="text-white font-extrabold text-xl leading-tight mb-1">Advanced Fellowship</h4>
 <p class="text-blue-200 text-sm font-medium">Refractive & Laser Surgeries</p>
+</div>
 </div>
 </div>
 </div>
